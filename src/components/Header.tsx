@@ -32,8 +32,8 @@ export function Header() {
     <HeaderWrapper>
       <Container>
         <Logo href="/">
-          <img src="/logo/4.png" alt="logo" />
-          퍼시픽피셔리
+          <img src="/logo/5.png" alt="logo" />
+          Pacific Fishries
         </Logo>
       </Container>
     </HeaderWrapper>
