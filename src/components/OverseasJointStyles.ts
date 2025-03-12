@@ -91,6 +91,10 @@ export const WhiteBox = styled.div<WhiteBoxProps>`
 export const ContentBox = styled.div`
   padding-top: 1rem;
   padding-right: 1rem;
+
+  .padding {
+    padding-bottom: 1rem;
+  }
 `;
 
 export const ImageContainer = styled.div`

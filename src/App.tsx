@@ -4,6 +4,7 @@ import { Footer } from "./components/Footer";
 import Carousel from "./components/Carousel";
 import OverseasJoint from "./components/OverseasJoint";
 import OverseasTraining from "./components/OverseasTrading";
+import FocusProjects from "./components/FocusProjects";
 import styled from "styled-components";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <MainContent>
         <OverseasJoint />
         <OverseasTraining />
+        <FocusProjects />
       </MainContent>
 
       <Footer />
