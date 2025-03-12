@@ -7,7 +7,7 @@ interface IndicatorDotProps {
 
 const Carousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState<boolean>(false);
+  const [isAutoPlaying, setIsAutoPlaying] = useState<boolean>(true);
   const totalSlides = 4;
 
   useEffect(() => {

@@ -33,7 +33,7 @@ export function Header() {
       <Container>
         <Logo href="/">
           <img src="/logo/5.png" alt="logo" />
-          Pacific Fishries
+          Pacific Fisheries
         </Logo>
       </Container>
     </HeaderWrapper>

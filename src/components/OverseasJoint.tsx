@@ -19,15 +19,15 @@ const OverseasJoint: React.FC = () => {
         <div className="content">
           <Styles.ContentBox>
             <p>
-              <span className="bold">Companies:</span>
+              <span className="bold">Companies: </span>
               PESQUERA PESANTICA TLDA, PESQUERA ARTESANAL GUAITECAS S.A.
             </p>
             <p>
-              <span className="bold">Vessel:</span>
+              <span className="bold">Vessel: </span>
               Three vessels of JOSEPINA, NAJARET & PESANTICA
             </p>
             <p>
-              <span className="bold">Fish Type:</span>
+              <span className="bold">Fish Type: </span>
               Tuna, Shark, Skate, Toothfish, Red catfish and Others
             </p>
           </Styles.ContentBox>
@@ -50,15 +50,15 @@ const OverseasJoint: React.FC = () => {
         <div className="content">
           <Styles.ContentBox>
             <p>
-              <span className="bold">Joint Company</span>
+              <span className="bold">Joint Company: </span>
               VIKING SEAFOODS LTD{" "}
             </p>
             <p>
-              <span className="bold">Vessel:</span>
+              <span className="bold">Vessel: </span>
               VIKING ENTERPRISE (TRAWL Fishing Ship)
             </p>
             <p>
-              <span className="bold">Fish Type:</span>
+              <span className="bold">Fish Type: </span>
               Pollack, Skate, and Ohter Benthic Fish
             </p>
           </Styles.ContentBox>
@@ -80,15 +80,15 @@ const OverseasJoint: React.FC = () => {
         <div className="content">
           <Styles.ContentBox>
             <p>
-              <span className="bold">Joint Company</span>
+              <span className="bold">Joint Company: </span>
               KNOTT HYUNCHANG FISHERIES CO. LTD.
             </p>
             <p>
-              <span className="bold">Vessel:</span>
+              <span className="bold">Vessel: </span>
               OUTLAW V (TRAWL Fishing Ship)
             </p>
             <p>
-              <span className="bold">Fish Type:</span>
+              <span className="bold">Fish Type: </span>
               Pollack, Skate, and Ohter Benthic Fish
             </p>
           </Styles.ContentBox>
