@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Neuropol";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./Neuropol.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Neuropol";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./Neuropol.otf") format("otf");
+}
