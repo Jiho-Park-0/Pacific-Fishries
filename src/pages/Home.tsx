@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 const Home: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = Array.from(
-    { length: 4 },
+    { length: 3 },
     (_, i) => `/image/main/${i + 1}.jpg`
   );
 

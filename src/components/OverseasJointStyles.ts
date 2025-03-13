@@ -103,9 +103,11 @@ export const ImageContainer = styled.div`
   gap: 10px;
   width: 100%;
   max-width: 440px;
+  pointer-events: none;
+  user-select: none;
 
   img {
-    width: 200px;
+    width: 170px;
     height: 100%;
   }
 `;
