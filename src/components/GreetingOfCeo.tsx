@@ -1,4 +1,4 @@
-import "../../public/fonts/Fonts.css";
+// import "../../public/fonts/Fonts.css";
 import styled from "styled-components";
 
 const GreetingOfCeo = () => {

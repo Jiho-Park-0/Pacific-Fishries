@@ -1,36 +1,27 @@
 import "./App.css";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import Carousel from "./components/Carousel";
-import OverseasJoint from "./components/OverseasJoint";
-import OverseasTraining from "./components/OverseasTrading";
-import FocusProjects from "./components/FocusProjects";
-import GreetingOfCeo from "./components/GreetingOfCeo";
-import styled from "styled-components";
+
+import { Layout } from "./components/Layout";
+
+import Home from "./pages/Home";
+import OverseasJoint from "./pages/OverseasBusiness";
+import FocusProjects from "./pages/FocusProjects";
+import GreetingOfCeo from "./pages/CompanyOverview";
+
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header />
-
-      <Carousel />
-      <MainContent>
-        <OverseasJoint />
-        <OverseasTraining />
-        <FocusProjects />
-        <GreetingOfCeo />
-      </MainContent>
-
-      <Footer />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/OverseasBusiness" element={<OverseasJoint />} />
+          <Route path="/FocusProjects" element={<FocusProjects />} />
+          <Route path="/CompanyOverview" element={<GreetingOfCeo />} />
+        </Routes>
+      </Layout>
     </>
   );
 }
-
-const MainContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-`;
 
 export default App;
