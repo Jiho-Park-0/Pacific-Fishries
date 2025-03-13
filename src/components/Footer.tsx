@@ -26,11 +26,9 @@ export function Footer() {
   return (
     <FooterWrapper>
       <Container>
-        <p>&copy; 2025 회사명. All rights reserved.</p>
-        <div>사업자 등록번호 : 000-00-00000 | 대표 : XXX</div>
-        <div>
-          00000 부산광역시 어디구 어디동 어디어디 000-0000 (어디어디 건물)
-        </div>
+        <p>&copy; 2025 PFC PACIFIC FISHERIES. All rights reserved.</p>
+        <div>사업자 등록번호 : 107-87-30053 | 대표 : 박규복</div>
+        <div>(49466) 부산광역시 사하구 장림번영로104번길 55</div>
       </Container>
     </FooterWrapper>
   );

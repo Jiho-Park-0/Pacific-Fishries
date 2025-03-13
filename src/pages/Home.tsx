@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     }, 5000); // 5초 간격으로 이미지 변경
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   const services = [
     {
@@ -61,12 +61,6 @@ const Home: React.FC = () => {
           </ServiceCard>
         ))}
       </ContentSection>
-
-      <Footer>
-        <FooterText>
-          © 2024 PFC PACIFIC FISHERIES. All rights reserved.
-        </FooterText>
-      </Footer>
     </Container>
   );
 };
@@ -82,12 +76,28 @@ const Container = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-`;
+  width: 70%;
 
+  @media (max-width: 768px) {
+    width: 85%;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+`;
 const CarouselContainer = styled.section`
   height: 60vh;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 50vh;
+  }
+
+  @media (max-width: 480px) {
+    height: 40vh;
+  }
 `;
 
 const CarouselImage = styled.img<{ active: boolean }>`
@@ -100,6 +110,7 @@ const CarouselImage = styled.img<{ active: boolean }>`
   opacity: ${({ active }) => (active ? 1 : 0)};
   transition: opacity 1.5s ease-in-out;
   animation: ${fadeIn} 1.5s ease-in-out;
+  filter: brightness(0.7);
 `;
 
 const Overlay = styled.div`
@@ -120,6 +131,13 @@ const CompanyName = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -130,69 +148,163 @@ const Slogan = styled.p`
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height: 1.4;
   }
 `;
-
 const ContentSection = styled.section`
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 4rem 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 3rem 1rem;
+  }
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #2c3e50;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #2980b9;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+
+    &::after {
+      width: 60px;
+      height: 3px;
+      margin: 0.75rem auto 0;
+    }
+  }
 `;
 
 const ServiceCard = styled.div`
-  background: #f8f9fa;
-  border-radius: 10px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 `;
 
 const ServiceTitle = styled.h3`
-  color: #2980b9;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-`;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  position: relative;
 
-const ServiceList = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  columns: 2;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #2980b9;
+    border-radius: 2px;
+  }
 
   @media (max-width: 768px) {
-    columns: 1;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
   }
 `;
 
-const ServiceItem = styled.li`
-  padding: 0.5rem 0;
-  font-size: 1.1rem;
-  color: #34495e;
+const ServiceList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+`;
+
+const ServiceItem = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  &:hover {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
 
   &::before {
-    content: "•";
+    content: "✓";
     color: #2980b9;
-    margin-right: 0.5rem;
+    font-weight: 700;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    min-width: 24px;
+    text-align: center;
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+      margin-right: 0.75rem;
+    }
   }
-`;
-
-const Footer = styled.footer`
-  background: #2c3e50;
-  color: white;
-  padding: 1.5rem;
-  margin-top: auto;
-  text-align: center;
-`;
-
-const FooterText = styled.p`
-  margin: 0;
-  font-size: 0.9rem;
 `;
 
 export default Home;
