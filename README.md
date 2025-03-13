@@ -1,51 +1,21 @@
-# React + TypeScript + Vite
+# [Pacific-Fishries](https://pfckorea.com/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="/public/logo/3.png" alt="Pacific-Fishries 로고" width="200" height="200">
 
-Currently, two official plugins are available:
+## 회사 소개
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+퍼시픽피셔리의 웹사이트 입니다.
 
-## Expanding the ESLint configuration
+## 기술 스택
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+본 웹사이트는 다음 기술을 기반으로 구축되었습니다:
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend**: React, TypeScript, Vite
+- **Style**: Styled-components
+- **Deployment**: Netlify
+- **CI/CD**: GitHub Actions
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 연락처
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# Pacific-Fishries
+- **본사**: (49466) 부산광역시 사하구 장림번영로104번길 55
+- **이메일**: fishdish.korea@gmail.com
